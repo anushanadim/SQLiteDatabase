@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/submit"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="16dp"
+        android:hint="NAME"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+    <EditText
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="222dp"
+        android:hint="NUM"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:text="submit"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <Button
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-12dp"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginBottom="46dp"
+        android:text="show"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+</RelativeLayout>
