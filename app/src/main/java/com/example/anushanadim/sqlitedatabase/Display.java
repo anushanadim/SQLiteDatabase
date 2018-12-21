@@ -25,7 +25,7 @@ public class Display extends AppCompatActivity {
 
         databaseHelper=new DatabaseHelper(this,DatabaseHelper.DATABASE,null,1);
         contactsList=databaseHelper.show();
-        adapter=new ContactsViewAdapter(contactsList);
+        adapter=new ContactsViewAdapter(contactsList,this);
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

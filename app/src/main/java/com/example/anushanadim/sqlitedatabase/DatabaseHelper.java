@@ -73,4 +73,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return contactsList;
 
     }
+
+    public void update(String name,int num)
+    {
+        SQLiteDatabase db=getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(NUM, num);
+        db.update(TABLE,contentValues ,"name='"+name+"'" ,null );
+    }
+
+    public List<Contacts> showReciever(String recieverName)
+    {
+        List<Contacts> contactsList=new ArrayList<>();
+
+        SQLiteDatabase db=getWritableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+TABLE+" WHERE name='"+recieverName+"';",null);
+
+        StringBuffer stringBuffer=new StringBuffer();
+
+        while (cursor.moveToNext())
+        {
+            Contacts contacts=new Contacts();
+
+            String name=cursor.getString(cursor.getColumnIndexOrThrow("name"));
+            int num=cursor.getInt(cursor.getColumnIndexOrThrow("num"));
+
+            contacts.setName(name);
+            contacts.setNum(num);
+
+            stringBuffer.append(contacts);
+            contactsList.add(contacts);
+        }
+
+        return contactsList;
+
+    }
 }
